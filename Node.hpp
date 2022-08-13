@@ -37,11 +37,10 @@ public:
     auto get_source();
     int get_weight();
     T &get_value();
-
 };
 
 template <typename T>
-bool operator < (const Node<T>& lhs, const Node<T>& rhs)
+bool operator<(const Node<T> &lhs, const Node<T> &rhs)
 {
     return lhs.weight < rhs.weight;
 }

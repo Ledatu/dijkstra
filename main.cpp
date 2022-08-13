@@ -72,11 +72,11 @@ int main()
     auto to = nodes[9];
     from->set_weight(0);
     Dijkstra(from, to);
-    
+
     std::cout << "\nTotal weight: " << to->get_weight() << "\n";
-    do {
+    do
+    {
         std::cout << to->get_value() << "-";
-    }
-    while(to = to->get_source().lock());
+    } while (to = to->get_source().lock());
     std::cout << "\b \n";
 }
